@@ -7,10 +7,10 @@ node 'cos3.business.unc.edu' {
     content => $fqdn,
     }
 }
-node /*web/ {
+node /^web/ {
   include role:app_server
 }
 
-node /*db/ {
+node /^db/ {
   include role:db_server
 }
